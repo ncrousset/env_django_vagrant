@@ -15,11 +15,10 @@ sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again p
 apt-get install -y nmon
 apt-get install -y nginx
 apt-get install -q -y -f mysql-server
-apt install -y python3.7
+apt install -y python3.8
 
 update-alternatives --remove python3 /usr/bin/python3.4
-update-alternatives --install /usr/bin/python3  python3 /usr/bin/python3.7 1
-
+update-alternatives --install /usr/bin/python3  python3 /usr/bin/python3.8 1
 service mysql restart
 service nginx start
 
