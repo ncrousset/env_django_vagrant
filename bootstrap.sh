@@ -17,10 +17,16 @@ apt-get install -y nginx
 apt-get install -q -y -f mysql-server
 apt-get install -y python3.8
 
+apt-get install -y python3-pip
+
+
 # apt-get install install -y python3-pip
 
 update-alternatives --remove python3 /usr/bin/python3.4
 update-alternatives --install /usr/bin/python3  python3 /usr/bin/python3.8 1
+
+python3 -m pip install --user --upgrade pip
+python3 -m pip install Django
 
 service mysql restart
 service nginx start
